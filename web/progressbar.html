@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+    <style>
+        .all {
+            display: flex;
+        }
+
+        .circle-wrap {
+            display: grid;
+            grid-template-columns: repeat(1, 160px);
+            grid-gap: 80px;
+            margin-top: 100px;
+            margin-left: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(38, 243, 226);
+            border-radius: 50%;
+        }
+
+        .circle-wrap .circle .mask,
+        .circle-wrap .circle .fill-1 .fill-2{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle-wrap .circle .mask {
+            clip: rect(0px, 110px, 110px, 75px);
+        }
+
+        .mask .fill-1 {
+            clip: rect(0px, 75px, 150px, 0px);
+            background-color: rgb(228, 200, 200);
+        }
+
+        .mask .full-1 {
+            animation: fill-1 ease-in-out 3s;
+            transform: rotate(131 deg);
+        }
+
+        @keyframes fill-1 {
+            0% {
+                transform: rotate(0 deg);
+            }
+
+            100% {
+                transform: rotate(167 deg);
+            }
+        }
+
+        .circle {
+            width: 124px;
+            height: 124px;
+            border-radius: 50%;
+            background: rgb(236, 236, 248);
+            line-height: 120px;
+            position: absolute;
+            margin-top: 13px;
+            margin-left: 13px;
+            z-index: 100;
+            font-size: 2em;
+            font-weight: 700;
+            color: rgb(223, 78, 21);
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <!-- 1st progress -->
+        <div class="circle-wrap">
+            <div class="circle">23%
+                <div class="mask full-1">
+                    <div class="fill-1"></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 2nd progress -->
+        <!-- <div class="circle">
+            <div class="mask full-2">
+                <div class="fill-2"></div>
+            </div>
+            
+        </div> -->
+    </div>
+</body>
+
+</html>

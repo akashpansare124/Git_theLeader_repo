@@ -1,0 +1,153 @@
+body {
+    background-image: url(../images/building.jpg);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: cover;
+
+    min-width: 600px;
+    max-height: 200px;
+}
+
+input {
+    width: 200px;
+    border: 0ch;
+    border-radius: 8px;
+    margin-right: 200px;
+
+    border-bottom: 2px solid white;
+
+}
+
+.form {
+    margin-top: 110px;
+    background-color: aquamarine;
+    text-align: center;
+    height: 600px;
+}
+
+select {
+    border: none;
+    color: violet;
+    background-color: aquamarine;
+}
+
+
+.all {
+    display: flex;
+}
+
+
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(240, 210, 247);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+.box .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(224, 121, 52);
+}
+
+.box .percent .number h2 {
+    font-size: 48px;
+}
+
+.box .percent .number h2 span {
+    font-size: 24px;
+}
+
+.box .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f8b2b2;
+}
+
+.box .percent svg circle:nth-child(2) {
+    stroke: #f3f3f3;
+    stroke-dashoffset: calc(120-120*60/100);
+}
+
+.timeline-area {
+    margin: 90px auto;
+    width: 360px;
+    border-left: 2px solid white #dff;
+    line-height: 1.7;
+    position: relative;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+div:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: aqua;
+    border: 3px solid #eed;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+
+div:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent rgb(50, 50, 224) ;
+    border-width: 8px;
+    position: absolute;
+    left: 17px;
+    top: 10px;
+}
+div h2{
+    margin: 0;text-transform: uppercase;
+}
+@keyframes fill-1 {
+    0% {
+        transform: rotate(0 deg);
+    }
+
+    100% {
+        transform: rotate(153 deg);
+    }
+}
